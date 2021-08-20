@@ -35,17 +35,17 @@
 
         <div class="components">
           <h3 class="fw-bold mt-4 mb-4">Memory</h3>
-          <button class="btn btn-dark fw-bold me-4 my-2">8 GB Unified Memory</button>
-          <button class="btn btn-dark fw-bold my-2">16 GB Unified Memory</button>
+          <button id='8gb-memory-btn' class="btn btn-outline-dark fw-bold me-4 my-2">8 GB Unified Memory</button>
+          <button id='16gb-memory-btn' class="btn btn-outline-dark fw-bold my-2">16 GB Unified Memory</button>
           <h3 class="fw-bold mt-4 mb-4">Storage</h3>
-          <button class="btn btn-dark fw-bold me-4 my-2">256 GB SSD Storage</button>
-          <button class="btn btn-dark fw-bold me-4 my-2">512 GB SSD Storage</button>
-          <button class="btn btn-dark fw-bold my-2">1 TB SSD Storage</button>
+          <button id='256gb-storage-btn' class="btn btn-outline-dark fw-bold me-4 my-2">256 GB SSD Storage</button>
+          <button id='512gb-storage-btn' class="btn btn-outline-dark fw-bold me-4 my-2">512 GB SSD Storage</button>
+          <button id='1tb-storage-btn' class="btn btn-outline-dark fw-bold my-2">1 TB SSD Storage</button>
           <h3 class="fw-bold mt-4 mb-4">Choose Your Delivery Option</h3>
-          <button class="btn btn-dark fw-bold me-4 my-2">
+          <button id='free-delivery-btn' class="btn btn-outline-dark fw-bold me-4 my-2">
             Friday, 25 Aug Prime Delivery
           </button>
-          <button class="btn btn-dark fw-bold my-2">
+          <button id='cash-delivery-btn' class="btn btn-outline-dark fw-bold my-2">
             21 Aug Delivery Charge 20$
           </button>
         </div>
@@ -58,25 +58,25 @@
             <tbody>
               <tr>
                 <th scope="row">Best Price</th>
-                <th>$<span>1299</span></th>
+                <th>$<span id="fixed-cost">1299</span></th>
               </tr>
               <tr>
                 <th scope="row">Extra Memory Cost</th>
-                <th>$<span>0</span></th>
+                <th>$<span id='memory-cost'>0</span></th>
               </tr>
               <tr>
                 <th scope="row">Extra Storage Cost</th>
-                <th>$<span>0</span></th>
+                <th>$<span id='storage-cost'>0</span></th>
               </tr>
               <tr>
                 <th scope="row">Delivery Charge</th>
-                <th>$<span>0</span></th>
+                <th>$<span id='delivery-cost'>0</span></th>
               </tr>
           
               <tfoot>
                 <tr>
                   <th scope="col">Total Price</th>
-                  <th scope="col">$<span>1299</span></th>
+                  <th scope="col">$<span id='total-cost'>1299</span></th>
                 </tr>
               </tfoot>
             </tbody>
@@ -86,7 +86,7 @@
         <!-- promo code -->
 
         <div>
-            <h5>Add Promo Code:</h5>
+            <h5>Add Promo Code</h5>
             <input class="pt-1 pb-2 " type="text" name="" id="promo-code">
             <button class="btn  btn-large btn-danger rounded fw-bolder py-2  ">Apply</button>
         </div>
@@ -94,7 +94,7 @@
     </main>
     <footer>
         <hr class="w-100">
-        <h1 class="fw-bold text-center">Total $ <span id="footer-price">1299</span></h1>
+        <h1 class="fw-bold text-center">Total $ <span id="total-cost-footer">1299</span></h1>
     </footer>
     <!-- JS script linking  -->
     <script src="script.js"></script>

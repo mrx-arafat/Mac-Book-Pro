@@ -1,0 +1,67 @@
+const memory = document.getElementById("memory-cost");
+const storage = document.getElementById("storage-cost");
+const delivery = document.getElementById("delivery-cost");
+
+//update total
+
+function update() {
+  const totalPrice = document.getElementById("total-cost");
+  totalPrice.innerText =
+    parseInt(memory.innerText) +
+    parseInt(storage.innerText) +
+    parseInt(delivery.innerText) +
+    1299;
+  const totalPriceFooter = document.getElementById("total-cost-footer");
+  totalPriceFooter.innerText =
+    parseInt(memory.innerText) +
+    parseInt(storage.innerText) +
+    parseInt(delivery.innerText) +
+    1299;
+}
+
+//promocode
+
+document
+  .getElementById("8gb-memory-btn")
+  .addEventListener("click", function () {
+    memory.innerText = 0;
+    update();
+  });
+
+document
+  .getElementById("16gb-memory-btn")
+  .addEventListener("click", function () {
+    memory.innerText = 180;
+    update();
+  });
+
+document
+  .getElementById("256gb-storage-btn")
+  .addEventListener("click", function () {
+    storage.innerText = 0;
+    update();
+  });
+document
+  .getElementById("512gb-storage-btn")
+  .addEventListener("click", function () {
+    storage.innerText = 100;
+    update();
+  });
+document
+  .getElementById("1tb-storage-btn")
+  .addEventListener("click", function () {
+    storage.innerText = 180;
+    update();
+  });
+document
+  .getElementById("free-delivery-btn")
+  .addEventListener("click", function () {
+    delivery.innerText = 0;
+    update();
+  });
+document
+  .getElementById("cash-delivery-btn")
+  .addEventListener("click", function () {
+    delivery.innerText = 20;
+    update();
+  });
