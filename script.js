@@ -21,6 +21,26 @@ function update() {
 
 //promo-code apply
 
+document
+  .getElementById("promo-code")
+  .addEventListener("keyup", function codeInput(event) {
+    if (event.target.value == "stevekaku") {
+      document.getElementById("promo-btn").removeAttribute("disabled");
+    } else {
+      document.getElementById("promo-btn").setAttribute("disabled", true);
+    }
+  });
+
+//clear
+document.getElementById("promo-btn").addEventListener("click", function (e) {
+  const clearValue = (document.getElementById("promo-code").value = "");
+  if (e.target.value == "stevekaku") {
+    document.getElementById("promo-btn").removeAttribute("disabled");
+  } else {
+    document.getElementById("promo-btn").setAttribute("disabled", true);
+  }
+});
+
 document.getElementById("promo-btn").addEventListener("click", function () {
   const totalCostPromo = document.getElementById("total-cost");
   totalCostPromo.innerText =
@@ -32,15 +52,6 @@ document.getElementById("promo-btn").addEventListener("click", function () {
     totalCostPromoFooter.innerText - totalCostPromoFooter.innerText * 0.2;
 });
 
-document
-  .getElementById("promo-code")
-  .addEventListener("keyup", function (event) {
-    if (event.target.value == "stevekaku") {
-      document.getElementById("promo-btn").removeAttribute("disabled");
-    } else {
-      document.getElementById("promo-btn").setAttribute("disabled", true);
-    }
-  });
 //fn call for all component cost
 document
   .getElementById("8gb-memory-btn")
