@@ -19,8 +19,29 @@ function update() {
     1299;
 }
 
-//promocode
+//promocode-apply
 
+document.getElementById("promo-btn").addEventListener("click", function () {
+  const totalCostPromo = document.getElementById("total-cost");
+  totalCostPromo.innerText =
+    totalCostPromo.innerText - totalCostPromo.innerText * 0.2;
+});
+document.getElementById("promo-btn").addEventListener("click", function () {
+  const totalCostPromoFooter = document.getElementById("total-cost-footer");
+  totalCostPromoFooter.innerText =
+    totalCostPromoFooter.innerText - totalCostPromoFooter.innerText * 0.2;
+});
+
+document
+  .getElementById("promo-code")
+  .addEventListener("keyup", function (event) {
+    if (event.target.value == "stevekaku") {
+      document.getElementById("promo-btn").removeAttribute("disabled");
+    } else {
+      document.getElementById("promo-btn").setAttribute("disabled", true);
+    }
+  });
+//fn call for all component cost
 document
   .getElementById("8gb-memory-btn")
   .addEventListener("click", function () {
