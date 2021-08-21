@@ -19,7 +19,7 @@ function update() {
     1299;
 }
 
-//promocode-apply
+//promo-code apply
 
 document.getElementById("promo-btn").addEventListener("click", function () {
   const totalCostPromo = document.getElementById("total-cost");
